@@ -1,10 +1,16 @@
+import Section from '@components/section'
+import Paragraph from '@components/paragraph'
+import { BioSection, BioYear } from '@components/bio'
+import NextLink from 'next/link'
 import {
-  Container,
   Box,
+  Button,
+  Container,
   Heading,
   Image,
   useColorModeValue,
 } from '@chakra-ui/react'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 export default function Home() {
   return (
     <Container>
@@ -15,7 +21,7 @@ export default function Home() {
         mb={6}
         align="center"
       >
-        Hello, I&apos;m a Japanese Computer Science student based in Vancouver.
+        Hi👋🏻 I&apos;m a Japanese CS student based in Vancouver.
       </Box>
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
@@ -45,6 +51,67 @@ export default function Home() {
           />
         </Box>
       </Box>
+      <Section delay={0.1}>
+        <Heading as="h3" variant="section-title">
+          Work
+        </Heading>
+        <Paragraph>
+          Kai is a Japanese software engineer based in Vancouver, with passions
+          in software enginering and solving problems. He is a senior Computer
+          Science student at The University of British Columbia (UBC) and
+          anticipated to graduate in May, 2023. Currently, looking for a 2022
+          summer internship.
+        </Paragraph>
+        <Box align="center" my={4}>
+          <NextLink href="/work">
+            <Button colorScheme="teal" rightIcon={<ChevronRightIcon />}>
+              My Portfolio
+            </Button>
+          </NextLink>
+        </Box>
+      </Section>
+      <Section delay={0.2}>
+        <Heading as="h3" variant="section-title">
+          Bio
+        </Heading>
+        <BioSection>
+          <BioYear>1999</BioYear>
+          Born in Tokyo, Japan.
+        </BioSection>
+        <BioSection>
+          <BioYear>2018</BioYear>
+          Started university in Vancouver.
+        </BioSection>
+        <BioSection>
+          <BioYear>2020</BioYear>
+          Interned at Eaglys as a SWE for 4 months in Tokyo.
+        </BioSection>
+        <BioSection>
+          <BioYear>2020</BioYear>
+          Interned at ExaWizards as a DevOps for 4 months in Tokyo.
+        </BioSection>
+        <BioSection>
+          <BioYear>2021</BioYear>
+          Co-op&apos;d at UBC lab for 8 months in Vancouver.
+        </BioSection>
+        <BioSection>
+          <BioYear>2021</BioYear>
+          Co-op&apos;d at SkyBox Labs for 4 months in Burnaby.
+        </BioSection>
+        <BioSection>
+          <BioYear>2023</BioYear>
+          Anticipated to graduate.
+        </BioSection>
+      </Section>
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          Hobbies & Interests
+        </Heading>
+        <Paragraph>
+          Chess, Golf, Soccer, Baseball, Surfing, Competitive Programming,
+          Photography, Languages, etc...
+        </Paragraph>
+      </Section>
     </Container>
   )
 }

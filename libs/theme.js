@@ -12,7 +12,7 @@ const styles = {
 const components = {
   Heading: {
     variants: {
-      sectionTitle: {
+      'section-title': {
         textDecoration: 'underline',
         fontSize: 20,
         textUnderlineOffset: 6,
