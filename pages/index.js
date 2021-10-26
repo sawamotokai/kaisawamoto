@@ -92,11 +92,11 @@ export default function Home() {
         </BioSection>
         <BioSection>
           <BioYear>2021</BioYear>
-          Co-op&apos;d at UBC lab for 8 months in Vancouver.
+          Co-op&apos;d at UBC lab as an RA for 8 months in Vancouver.
         </BioSection>
         <BioSection>
           <BioYear>2021</BioYear>
-          Co-op&apos;d at SkyBox Labs for 4 months in Burnaby.
+          Co-op&apos;d at SkyBox Labs as a SWE for 4 months in Burnaby.
         </BioSection>
         <BioSection>
           <BioYear>2023</BioYear>

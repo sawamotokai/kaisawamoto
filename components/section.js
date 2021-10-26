@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import { chakra, shouldForwardProp } from '@chakra-ui/react'
 
 const StyledDiv = chakra(motion.div, {
+  // filters props out
+  // shouldForwardProp(prop) => false if prop is a deafault chakra style prop; transition is one of default prop here.
   shouldForwardProp: prop => shouldForwardProp(prop) || prop === 'transition',
 })
 
