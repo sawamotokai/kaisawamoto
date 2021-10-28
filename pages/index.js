@@ -14,13 +14,14 @@ import {
   Link,
   ListItem,
   Icon,
+  LinkBox,
+  LinkOverlay,
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import {
   IoLogoTwitter,
   IoLogoInstagram,
   IoLogoGithub,
-  IoLogoDiscord,
   IoLogoLinkedin,
 } from 'react-icons/io5'
 export default function Home() {
@@ -41,10 +42,7 @@ export default function Home() {
             <Heading as="h2" variant="page-title">
               Kai Sawamoto
             </Heading>
-            <p>
-              4th-year Computer Science student at The University of British
-              Columbia
-            </p>
+            <p>4th-year CS major at The University of British Columbia</p>
           </Box>
           <Box
             flexShrink={0}
@@ -52,16 +50,22 @@ export default function Home() {
             ml={{ md: 6 }}
             align="center"
           >
-            <Image
-              borderColor="whiteAlpha.800"
-              borderWidth={2}
-              borderStyle="solid"
-              maxWidth="100px"
-              borderRadius="full"
-              display="inline-block"
-              src="/images/linkedin_profile.jpg"
-              alt="Profile Image"
-            />
+            <LinkBox cursor="pointer">
+              <Image
+                borderColor="whiteAlpha.800"
+                borderWidth={2}
+                borderStyle="solid"
+                maxWidth="100px"
+                borderRadius="full"
+                display="inline-block"
+                src="/images/linkedin_profile.jpg"
+                alt="Profile Image"
+              />
+              <LinkOverlay
+                isExternal
+                href="https://www.linkedin.com/in/kaisawamoto/"
+              />
+            </LinkBox>
           </Box>
         </Box>
         <Section delay={0.1}>
@@ -115,6 +119,13 @@ export default function Home() {
             <BioYear>2023</BioYear>
             Anticipated to graduate.
           </BioSection>
+          <Box align="center" my={4}>
+            <NextLink href="/resume">
+              <Button colorScheme="teal" rightIcon={<ChevronRightIcon />}>
+                My Resume
+              </Button>
+            </NextLink>
+          </Box>
         </Section>
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
