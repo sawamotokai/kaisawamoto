@@ -8,7 +8,7 @@ const ThemeToggleButton = () => {
   return (
     <AnimatePresence exitBeforeEnter>
       <motion.div
-        style={{ diplay: 'inline-block' }}
+        style={{ display: 'inline-block' }}
         key={useColorModeValue('light', 'dark')}
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
