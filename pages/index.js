@@ -24,6 +24,7 @@ import {
   IoLogoGithub,
   IoLogoLinkedin,
 } from 'react-icons/io5'
+import { FaDev } from 'react-icons/fa'
 export default function Home() {
   return (
     <Layout>
@@ -149,6 +150,17 @@ export default function Home() {
                   leftIcon={<Icon as={IoLogoLinkedin} />}
                 >
                   @kaisawamoto
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://dev.to/sawamotokai" isExternal>
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={FaDev} />}
+                >
+                  @sawamotokai
                 </Button>
               </Link>
             </ListItem>
