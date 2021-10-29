@@ -4,7 +4,7 @@ import { Heading } from '@chakra-ui/react'
 import dynamic from 'next/dynamic'
 const PDFViewer = dynamic(import('../components/pdf-viewer'), {
   ssr: false,
-  loading: () => <p>...</p>,
+  loading: () => <p>Loading...</p>,
 })
 
 const Resume = () => {
