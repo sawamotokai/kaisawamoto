@@ -20,7 +20,7 @@ const Work = () => {
         </Title>
         <P>
           Vault is a password management tool to generate and store robust
-          passwords. You simply type a service name and an account ID and it
+          passwords. You simply input a service name and an account ID and it
           will generate a password for you. Alternatively, if you have your own
           password you can also store it as it is.
         </P>
